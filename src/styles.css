@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.hidden-menu {
+  display: none;
+}
+
+.visible-menu {
+  display: block;
+}
+
+.main-background{
+  background-color: #bfb688;
+}
+
+.header{
+  background-color: #2e2b1c;
+}
+
+.footer{
+  background-color: #2e2b1c;
+  color: #bfb688;
+}
+
+.dbs-heading{
+  color: #bfb688;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.hamburger{
+  color: #bfb688;
+}
+
+.general-text{
+  color: #2e2b1c;
+}
+
+.component-box{
+  border: 1px solid #2e2b1c;
+  background-color: #f7ebb1;
+}
+
+.bodega-list-boundary {
+  width: 100%; /* Ensure the container takes up full width of its parent */
+}
+
+.bodega-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%; /* Ensure the list takes up full width of its parent */
+  padding: 0 16px; /* Add padding to the list */
+}
+
+.bodega-item {
+  width: 100%; /* Ensure each item takes up full width of its parent */
+  box-sizing: border-box;
+  padding: 16px;
+  border: 1px solid #2e2b1c;
+  border-radius: 8px;
+  background-color: #f7ebb1;
+  margin: 0 auto 16px auto; /* Center align the boxes */
+}
+
+.bodega-item h2 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.bodega-item p {
+  margin-bottom: 4px;
+}
+
+.filter-overlay {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+  overflow-y: scroll;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000; /* Ensure this is higher than the map's z-index */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-container {
+  background: white;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-label {
+  font-weight: bold;
+  display: block;
+}
+
+.filter-options {
+  text-align: left;
+}
+
+.filter-options label input {
+  margin-right: 8px; /* Add margin to the right of the checkbox */
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.apply-filters,
+.remove-filters {
+  font-weight: bold;
+}
+
+.leaflet-container {
+  z-index: 0; /* Ensure the map's z-index is lower */
+}
+
+/* Custom Z-Index Classes with Descriptive Names */
+.nav-menu {
+z-index: 1030;
+}
+
+.header {
+z-index: 20;
+}
+
+.overlay {
+z-index: 50;
+}
+
+.right-align {
+display: flex;
+justify-content: flex-end;
+width: 100%;
+}
+
