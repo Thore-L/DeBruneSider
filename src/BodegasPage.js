@@ -128,21 +128,31 @@ const BodegasPage = ({ language }) => {
                 <label>
                   <input
                     type="checkbox"
-                    value="District 2"
-                    checked={filters.district.includes('District 2')}
+                    value="Christianshavn"
+                    checked={filters.district.includes('Christianshavn')}
                     onChange={e => handleFilterChange('district', e.target.checked ? [...filters.district, e.target.value] : filters.district.filter(val => val !== e.target.value))}
                   />
-                  District 2
+                  Christianshavn
                 </label>
                 <br />
                 <label>
                   <input
                     type="checkbox"
-                    value="District 3"
-                    checked={filters.district.includes('District 3')}
+                    value="Frederiksberg"
+                    checked={filters.district.includes('Frederiksberg')}
                     onChange={e => handleFilterChange('district', e.target.checked ? [...filters.district, e.target.value] : filters.district.filter(val => val !== e.target.value))}
                   />
-                  District 3
+                  Frederiksberg
+                </label>
+                <br />
+                <label>
+                  <input
+                    type="checkbox"
+                    value="Indre By"
+                    checked={filters.district.includes('Indre By')}
+                    onChange={e => handleFilterChange('district', e.target.checked ? [...filters.district, e.target.value] : filters.district.filter(val => val !== e.target.value))}
+                  />
+                  Indre By
                 </label>
               </div>
             </div>
