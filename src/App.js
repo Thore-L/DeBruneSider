@@ -1,6 +1,6 @@
 // App.js
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
 import './styles.css';
 import HomePage from './HomePage';
 import BodegasPage from './BodegasPage';
@@ -19,7 +19,7 @@ const App = () => {
   };
 
   return (
-    <Router>
+    <Router basename="/DeBruneSider">
       <div className="main-background min-h-screen flex flex-col items-center">
         <header className="w-full fixed top-0 left-0 flex justify-between items-center p-4 header">
           <div className="text-xl font-bold dbs-heading">De Brune Sider</div>
@@ -43,7 +43,8 @@ const App = () => {
 
         <main className="mt-20 w-full flex flex-col items-center">
           <Routes>
-            <Route path="/" element={<HomePage language={language} />} />
+            <Route path="/" element={<Navigate to="/home" />} />
+            <Route path="/home" element={<HomePage language={language} />} />
             <Route path="/bodegas" element={<BodegasPage language={language} />} />
             <Route path="/bodegas/:id" element={<BarDetails language={language} />} />
           </Routes>
