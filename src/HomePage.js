@@ -27,7 +27,7 @@ const HomePage = ({ language }) => {
 
   return (
     <div className="w-full flex flex-col items-center">
-      <img src="/DBS_Logo.png" alt="Logo" className="w-3/4 mt-4" />
+      <img src="${process.env.PUBLIC_URL}/DBS_Logo.png" alt="Logo" className="w-3/4 mt-4" />
       <div className="w-full flex justify-center mt-4 relative">
         <input
           type="text"
